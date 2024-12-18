@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import logo from "../../assets/logo.png";  // Correct path to logo
+import logo from "../../assets/logo.png";  
 import img1 from "../../assets/img6.png";
 import img2 from "../../assets/img4.png";
 import img3 from "../../assets/img1.png";
