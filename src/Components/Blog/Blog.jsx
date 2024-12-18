@@ -1,4 +1,4 @@
-import bloggif from "../../assets/blogif.mp4";
+import bloggif from "../../../public/blogif.mp4";
 import logo from "../../../public/logo.png";
 import Footer from "../Footer/Footer";
 import "./Blog.css";
