@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import logo from "../../assets/logo.png";  
+import logo from "../../assets/logo.png";  // Correct import for the logo
 import img1 from "../../assets/img6.png";
 import img2 from "../../assets/img4.png";
 import img3 from "../../assets/img1.png";
@@ -88,9 +88,8 @@ const Service = () => {
         <div className="logo-container w-full">
           <a href="/" className="back-icon">&larr;</a>
           <a href="/home" className="logo">
-            {/* <img src={logo} alt="Rarsi Media Logo" /> */}
-            <img src="/logo.png" alt="Rarsi Media Logo" />
-
+            {/* Use the imported logo */}
+            <img src={logo} alt="Rarsi Media Logo" />
           </a>
         </div>
         <div className="service-part">
@@ -106,9 +105,10 @@ const Service = () => {
                     key={index}
                   >
                     <div>
+                      {/* Use the imported image for each service */}
                       <img
                         src={e.img}
-                        alt="img"
+                        alt={e.name}
                         className="h-56 rounded-t-xl w-full p-6"
                       />
                     </div>
