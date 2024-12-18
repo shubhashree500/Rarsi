@@ -88,7 +88,9 @@ const Service = () => {
         <div className="logo-container w-full">
           <a href="/" className="back-icon">&larr;</a>
           <a href="/home" className="logo">
-            <img src={logo} alt="Rarsi Media Logo" />
+            {/* <img src={logo} alt="Rarsi Media Logo" /> */}
+            <img src="/logo.png" alt="Rarsi Media Logo" />
+
           </a>
         </div>
         <div className="service-part">
