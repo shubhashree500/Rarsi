@@ -1,7 +1,7 @@
 import './Term&Condition.css';
 import { FaCheck } from "react-icons/fa";
 import Footer from '../Footer/Footer';
-import logo from "../../assets/logo.png";
+import logo from "../../../public/logo.png";
 const Term_Condition = () => {
   return (
     <div>

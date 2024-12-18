@@ -1,7 +1,7 @@
 import  { useEffect, useState } from 'react';
 import crossIcon from "../../assets/cross_icon.svg";
 import MenuIcon from "../../assets/menu_icon.svg";
-import logo from "../../assets/logo.png";
+import logo from "../../../public/logo.png";
 import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(false);

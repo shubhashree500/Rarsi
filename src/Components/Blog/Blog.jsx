@@ -1,5 +1,5 @@
 import bloggif from "../../assets/blogif.mp4";
-import logo from "../../assets/logo.png";
+import logo from "../../../public/logo.png";
 import Footer from "../Footer/Footer";
 import "./Blog.css";
 const Blog = () => {

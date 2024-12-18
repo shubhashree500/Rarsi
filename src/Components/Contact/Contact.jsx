@@ -1,5 +1,5 @@
 import "./Contact.css"; // Importing styles
-import logo from "../../assets/logo.png"; // Correct path based on folder structure
+import logo from "../../../public/logo.png"; // Correct path based on folder structure
 import Footer from "../Footer/Footer"; // Importing Footer component
 
 const Contact = () => {
