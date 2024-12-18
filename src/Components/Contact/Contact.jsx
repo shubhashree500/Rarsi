@@ -1,5 +1,5 @@
 import "./Contact.css"; // Importing styles
-import logo from "../../assets/logo.png"; // Importing logo
+import logo from "../../assets/logo.png"; // Importing logo (Ensure correct path)
 import Footer from "../Footer/Footer"; // Importing Footer component
 
 const Contact = () => {
@@ -12,6 +12,7 @@ const Contact = () => {
                     <a href="/" className="back-icon">&larr;</a>
                     {/* Logo */}
                     <a href="/" className="logo">
+                        {/* Ensure the path is correct */}
                         <img src={logo} alt="Rarsi Media Logo" />
                     </a>
                 </div>

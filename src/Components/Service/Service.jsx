@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.png";  // Correct path to logo
 import img1 from "../../assets/img6.png";
 import img2 from "../../assets/img4.png";
 import img3 from "../../assets/img1.png";
@@ -10,6 +10,7 @@ import img5 from "../../assets/img5.png";
 import img6 from "../../assets/img3.png";
 import Footer from "../Footer/Footer";
 import "./Service.css";
+
 const Service = () => {
   const data = [
     {
@@ -20,30 +21,29 @@ const Service = () => {
     {
       img: img2,
       name: "Marketing Solutions",
-      Details: "From strategy to execution, we offer marketing solutions that deliver measurable results.",
+      Details: "From strategy to execution, we offer marketing solutions that deliver measurable results.",
     },
     {
       img: img3,
       name: "Content Production & Creation",
-      Details: "Creative and compelling content designed to captivate your audience and strengthen your brand.",
+      Details: "Creative and compelling content designed to captivate your audience and strengthen your brand.",
     },
     {
       img: img4,
       name: "CC Management",
-      Details: "Building strong customer connections through consistent and innovative community management.",
+      Details: "Building strong customer connections through consistent and innovative community management.",
     },
     {
       img: img1,
       name: "Website and SEO",
-      Details: "We design websites that attract, engage, and convert. With powerful SEO, we make sure your site ranks high.",
+      Details: "We design websites that attract, engage, and convert. With powerful SEO, we make sure your site ranks high.",
     },
     {
       img: img6,
       name: "Brand Development & Strategy",
-      Details: "We help you define, refine, and elevate your brand strategy, ensuring you stand out in the market.",
+      Details: "We help you define, refine, and elevate your brand strategy, ensuring you stand out in the market.",
     },
   ];
-
 
   const settings = {
     accessibility: true,
@@ -83,7 +83,7 @@ const Service = () => {
   };
 
   return (
-    <div className=" min-h-screen flex flex-col justify-center bg-slate-300" id='services'>
+    <div className="min-h-screen flex flex-col justify-center bg-slate-300" id="services">
       <div className="service-container">
         <div className="logo-container w-full">
           <a href="/" className="back-icon">&larr;</a>
@@ -96,7 +96,7 @@ const Service = () => {
             <h2>-: &nbsp;SERVICES &nbsp;:-</h2>
           </div>
           <div className="mt-5 lg:px-32 px-5">
-            <div className="two ">
+            <div className="two">
               <Slider {...settings}>
                 {data.map((e, index) => (
                   <div
@@ -107,13 +107,13 @@ const Service = () => {
                       <img
                         src={e.img}
                         alt="img"
-                        className=" h-56 rounded-t-xl w-full p-6"
+                        className="h-56 rounded-t-xl w-full p-6"
                       />
                     </div>
 
-                    <div className=" flex flex-col justify-center items-center  rounded-md">
-                      <h1 className=" font-semibold text-xl pt-4">{e.name}</h1>
-                      <h3 className=" p-4 flex text-center">{e.Details}</h3>
+                    <div className="flex flex-col justify-center items-center rounded-md">
+                      <h1 className="font-semibold text-xl pt-4">{e.name}</h1>
+                      <h3 className="p-4 flex text-center">{e.Details}</h3>
                     </div>
                   </div>
                 ))}
