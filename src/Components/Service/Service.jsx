@@ -2,12 +2,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import logo from "../../../public/logo.png";
-import img1 from "../../assets/img6.png";
-import img2 from "../../assets/img4.png";
-import img3 from "../../assets/img1.png";
-import img4 from "../../assets/img2.png";
-import img5 from "../../assets/img5.png";
-import img6 from "../../assets/img3.png";
+import img1 from "../../../public/img6.png";
+import img2 from "../../../public/img4.png";
+import img3 from "../../../public/img1.png";
+import img4 from "../../../public/img2.png";
+import img5 from "../../../public/img5.png";
+import img6 from "../../../public/img3.png";
 import Footer from "../Footer/Footer";
 import "./Service.css";
 
