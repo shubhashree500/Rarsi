@@ -1,52 +1,56 @@
-import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaArrowLeft } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa";
-import img1 from "../../Assets/bs.jpg";
-const Services = () => {
+import logo from "../../assets/logo.png";
+import img1 from "../../assets/img6.png";
+import img2 from "../../assets/img4.png";
+import img3 from "../../assets/img1.png";
+import img4 from "../../assets/img2.png";
+import img5 from "../../assets/img5.png";
+import img6 from "../../assets/img3.png";
+import Footer from "../Footer/Footer";
+import "./Service.css";
+const Service = () => {
   const data = [
     {
-      img:img1,
-      name: "asdbnm",
-      specialties: "Orthopedic Surgeon",
+      img: img5,
+      name: "Social Media",
+      Details: "We help manage your brand's voice, engage your audience, and create impactful social campaigns."
+    },
+    {
+      img: img2,
+      name: "Marketing Solutions",
+      Details: "From strategy to execution, we offer marketing solutions that deliver measurable results.",
+    },
+    {
+      img: img3,
+      name: "Content Production & Creation",
+      Details: "Creative and compelling content designed to captivate your audience and strengthen your brand.",
+    },
+    {
+      img: img4,
+      name: "CC Management",
+      Details: "Building strong customer connections through consistent and innovative community management.",
     },
     {
       img: img1,
-      name: "zxcvbnm",
-      specialties: "Cardiologist",
+      name: "Website and SEO",
+      Details: "We design websites that attract, engage, and convert. With powerful SEO, we make sure your site ranks high.",
     },
     {
-      img: img1,
-      name: "qwertyui",
-      specialties: "Pediatrician",
-    },
-    {
-      img: img1,
-      name: "qwertyu",
-      specialties: "Neurologist",
-    },
-    {
-      img: img1,
-      name: "qwertyu",
-      specialties: "Dermatologist",
-    },
-    {
-      img: img1,
-      name: "qwertyuio",
-      specialties: "Ophthalmologist",
+      img: img6,
+      name: "Brand Development & Strategy",
+      Details: "We help you define, refine, and elevate your brand strategy, ensuring you stand out in the market.",
     },
   ];
 
-  const slider = useRef(null);
 
   const settings = {
     accessibility: true,
     dots: true,
     infinite: true,
     speed: 500,
-    arrows: false,
+    arrows: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
@@ -79,57 +83,53 @@ const Services = () => {
   };
 
   return (
-    <div className=" min-h-screen flex flex-col justify-center lg:px-32 px-5 pt-16">
-      <div className=" flex flex-col items-center lg:flex-row justify-between mb-10 lg:mb-0">
-        <div>
-          <h1 className=" text-4xl font-semibold text-center lg:text-start">
-            Our Doctors
-          </h1>
-          <p className=" mt-2 text-center lg:text-start">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus,
-            quidem.
-          </p>
+    <div className=" min-h-screen flex flex-col justify-center bg-slate-300" id='services'>
+      <div className="service-container">
+        <div className="logo-container w-full">
+          <a href="/" className="back-icon">&larr;</a>
+          <a href="/home" className="logo">
+            <img src={logo} alt="Rarsi Media Logo" />
+          </a>
         </div>
-        <div className="flex gap-5 mt-4 lg:mt-0">
-          <button
-            className=" bg-[#d5f2ec] text-backgroundColor px-4 py-2 rounded-lg active:bg-[#ade9dc]"
-            onClick={() => slider.current.slickPrev()}
-          >
-            <FaArrowLeft size={25} />
-          </button>
-          <button
-            className=" bg-[#d5f2ec] text-backgroundColor px-4 py-2 rounded-lg active:bg-[#ade9dc]"
-            onClick={() => slider.current.slickNext()}
-          >
-            <FaArrowRight size={25} />
-          </button>
-        </div>
-      </div>
-      <div className=" mt-5">
-        <Slider ref={slider} {...settings}>
-          {data.map((e, index) => (
-            <div
-              className="h-[350px] text-black rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] mb-2 cursor-pointer"
-              key={index}
-            >
-              <div>
-                <img
-                  src={e.img}
-                  alt="img"
-                  className=" h-56 rounded-t-xl w-full"
-                />
-              </div>
+        <div className="service-part">
+          <div className="service-header">
+            <h2>-: &nbsp;SERVICES &nbsp;:-</h2>
+          </div>
+          <div className="mt-5 lg:px-32 px-5">
+            <div className="two ">
+              <Slider {...settings}>
+                {data.map((e, index) => (
+                  <div
+                    className="h-[450px] text-black rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] mb-2 cursor-pointer"
+                    key={index}
+                  >
+                    <div>
+                      <img
+                        src={e.img}
+                        alt="img"
+                        className=" h-56 rounded-t-xl w-full p-6"
+                      />
+                    </div>
 
-              <div className=" flex flex-col justify-center items-center">
-                <h1 className=" font-semibold text-xl pt-4">{e.name}</h1>
-                <h3 className=" pt-2">{e.specialties}</h3>
-              </div>
+                    <div className=" flex flex-col justify-center items-center  rounded-md">
+                      <h1 className=" font-semibold text-xl pt-4">{e.name}</h1>
+                      <h3 className=" p-4 flex text-center">{e.Details}</h3>
+                    </div>
+                  </div>
+                ))}
+              </Slider>
             </div>
-          ))}
-        </Slider>
+          </div>
+        </div>
+        <div className="about-us-button">
+          <button className="cta-btn"><a href="/contact">Get In Touch</a></button>
+        </div>
+        <div className="footerSection pt-16">
+          <Footer />
+        </div>
       </div>
     </div>
   );
 };
 
-export default Services;
+export default Service;

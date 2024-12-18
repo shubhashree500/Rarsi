@@ -1,19 +1,17 @@
-import React from 'react'
 import "./Home.css";
-import Hero from "../../Assets/hero.mov";
+import Hero from "../../assets/hero.mov";
 import Navbar from '../Navbar/Navbar';
 import Marketing from '../Marketing/Marketing';
-
+import About from '../About/About';
+import Process from '../Process/Process';
+import Footer from '../Footer/Footer';
+import { Link } from 'react-router-dom';
 const Home = () => {
     // const words = ["Presence", "Identity", "Strategy", "Brand", "Impact"];
-    // const [ChangeWord, SetChangeWord] = useState(true);
     // Function to update the dynamic word
-    // function updateDynamicWord() {
-        // ChangeWord.textContent = words[1];
-        // SetChangeWord = (ChangeWord + 1) % words.length;
-    // }
     return (
-        <div>
+        <div id='home'>
+            {/* <ContactUsPopup/> */}
             <header id="hero">
                 <video
                     playsInline
@@ -26,31 +24,35 @@ const Home = () => {
                     Your browser does not support the video tag.
                 </video>
                 <Navbar />
-                <div class="Home-container">
+                <div className="Home-container">
                     <div className='Heading_one'>
-                        <p class="static-text">Transform Your Digital &nbsp;
+                        <p className="static-text">Transform Your Digital &nbsp;
                             <span id="dynamic-word">Presence</span>
                             <span>&nbsp;With Us.</span>
                         </p>
                     </div>
                     <div className='Heading_two'>
-                    <p>We craft bold strategies to take your brand to the next level.</p>
-                    <button class="cta-btn"><a href="services.html">Explore Services</a>
-                    </button>
-                </div>
+                        <p>We craft bold strategies to take your brand to the next level.</p>
+                        <button className="cta-btn"><Link to="/services">Explore Services</Link>
+                        </button>
+                    </div>
                 </div>
             </header>
 
             {/* <!-- Services Scroller --> */}
-            <div class="service-scroller">
+            <div className="service-scroller">
                 {/* <marquee id="scroller" behavior="scroll" direction="left" scrollamount="10">
                     Capturing essence, curating influence. Your social media presence, elevated with grace. #RarsiMedia
-                    | Dominating the digital game. Where bold strategies meet unstoppable results. Lets make your brand unmissable.
+                    | Dominating the digital game. Where bold strategies meet unstoppable results. Let’s make your brand unmissable.
                     #RarsiMedia
                 </marquee> */}
             </div>
             <Marketing />
+            <About />
+            <Process />
+            <Footer />
         </div>
     )
 }
 export default Home;
+

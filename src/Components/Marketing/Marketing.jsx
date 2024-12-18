@@ -1,12 +1,11 @@
-import React from 'react';
 import "./Marketing.css";
 // import Marketingvdo from "../../Assets/marketing.mov";
 
 const Marketing = () => {
   return (
     <div>
-      <div class="marketing-section">
-        <div class="marketing-background">
+      <div className="marketing-section">
+        <div className="marketing-background">
           {/* <video
             playsInline
             autoplay
@@ -17,14 +16,14 @@ const Marketing = () => {
           </video> */}
         </div>
 
-        <div class="marketing-text">
-          <p class="marketing-line one">Twists and turns?</p>
-          <p class="marketing-line two" style={{color:"black"}}>We turn them into trends—</p>
-          <p class="marketing-line three">your brand, always ahead.</p>
+        <div className="marketing-text">
+          <p className="marketing-line one">Twists and turns?</p>
+          <p className="marketing-line two" style={{color:"black"}}>We turn them into trends</p>
+          <p className="marketing-line three">your brand, always ahead.</p>
         </div>
 
         {/* <!-- Heartbeat Line --> */}
-        <div class="heartbeat-line"></div>
+        <div className="heartbeat-line"></div>
       </div>
     </div>
   )

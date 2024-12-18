@@ -1,17 +1,16 @@
-import React from 'react';
-import About_img from "../../Assets/About.png";
-import AboutVdo from "../../Assets/about.mov";
+import About_img from "../../assets/About.png";
+import AboutVdo from "../../assets/about.mov";
 import { motion } from "framer-motion";
 import './About.css';
 const About = () => {
   return (
     <div id='about'>
-      <div class="about-us-container">
+      <div className="about-us-container">
         {/* <!-- Background Video --> */}
-        <div class="about-us-background">
+        <div className="about-us-background">
           <video
             playsInline
-            autoplay
+            className="about-video"
             muted
             loop
           >
@@ -19,10 +18,10 @@ const About = () => {
           </video>
         </div>
         <div className='About-Container'>
-          <div class="about-us-content"
+          <div className="about-us-content"
           >
-            <h3 style={{ display: "flex", justifyContent: "center", color: "#3bab5a" }}>ABOUT US</h3>
-            <p>We Rarsi Media, where creativity meets strategy to transform brands into social media powerhouses. We are a
+            <h3 style={{ display: "flex", justifyContent: "center" }}>ABOUT US</h3>
+            <p>We are Rarsi Media, where creativity meets strategy to transform brands into social media powerhouses. We are a
               vibrant and innovative social media agency dedicated to helping businesses of all sizes establish a compelling
               digital presence.</p>
             <p>At Rarsi Media, we don’t just manage your social platforms; we craft stories that resonate, campaigns that

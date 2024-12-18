@@ -1,8 +1,10 @@
-import React from 'react';
 import { TiClipboard } from "react-icons/ti";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { SiDatabricks } from "react-icons/si";
-import { IoRemoveOutline } from "react-icons/io5";
+// import { IoRemoveOutline } from "react-icons/io5";
+// import { FaArrowDown } from "react-icons/fa";
+import { FaArrowRightLong } from "react-icons/fa6";
+
 import { motion } from "framer-motion";
 import "./Process.css";
 import DetailsPage from './DetailsPage';
@@ -19,9 +21,9 @@ const Process = () => {
 
     return (
         <div className='bg-white p-8 w-full '>
-            <div>
+            <div className='our_process'>
                 <h1 className='text font-bold text-green-500 text-4xl text-center pt-5 pb-4'>OUR PROCESS</h1>
-                <h1 className='text-slate-800  text-3xl font-semibold text-center pb-10'>Follow the process to get your solutions.</h1>
+                <h2 className='text-slate-800  text-xl font-semibold text-center pb-10'>Follow the process to get your solutions.</h2>
 
             </div>
 
@@ -31,15 +33,15 @@ const Process = () => {
                 transition={{
                     duration: "0.6",
                 }}
-                className=" flex flex-col  md:flex-row sm:flex-row lg:flex-row gap-5 pt-17">
+                className="icon-container flex flex-col  md:flex-row sm:flex-row lg:flex-row ">
                 <DetailsPage icon={icon3} title="Book A Service" />
-                <IoRemoveOutline size={150} className='inner-line' />
-                <DetailsPage icon={icon1} title="Consultation" />
-                <IoRemoveOutline size={150} className='inner-line' />
+                <FaArrowRightLong  size={80} className='inner-line pb-5' />
+                <DetailsPage icon={icon1} title="Consultation"/>
+                <FaArrowRightLong size={80} className='inner-line pb-5' />
                 <DetailsPage icon={icon2} title="Growth" />
             </motion.div>
-            <div class="about-us-button">
-                <button class="cta-btn"><a href="contact.html">Get In Touch</a></button>
+            <div className="about-us-button">
+                <button className="cta-btn"><a href="/contact">Get In Touch</a></button>
             </div>
         </div>
     )

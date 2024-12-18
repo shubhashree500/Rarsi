@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Condiment&family=Doto:wght@100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -42,7 +43,7 @@ body {
 }
 .static-text {
   color: #ffffff;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 #dynamic-word {
@@ -72,6 +73,8 @@ body {
 .Heading_two>p{
   font-size: 25px;
   margin-bottom: 5%;
+  color: white;
+  font-weight: 100;
 }
 .cta-btn a {
   text-decoration: none;
@@ -102,4 +105,16 @@ body {
 
 .service-scroller:hover {
   cursor: pointer;
+}
+@media only screen and (max-width: 600px){
+.Heading_two>p{
+  font-size: 20px !important;
+  padding: 0% 5%;
+}
+}
+@media only screen and (max-width: 400){
+  .static-text {
+    color: #ffffff;
+    font-size: 2rem !important;
+  }
 }
